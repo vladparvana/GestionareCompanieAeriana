@@ -1,0 +1,9 @@
+click
+cx-Oracle
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+bcrypt
+Flask_login

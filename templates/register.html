@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  <div class="bg-primary text-light py-1" style="">
+    <div class="container text-center">
+      <div class="row align-items-center">
+        <div class="bg-primary align-items-center col-md-12">
+          <h1 class="display-1">Tarom<br></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 text-center" style="">
+    <div class="container">
+      <div class="row" style="">
+        <div class="mx-auto col-lg-6 col-10" style="">
+          <h1 class="">Inregistrare</h1>
+          <p class="mb-3">Iti garantam ca informatiile tale sunt in siguranta.</p>
+          <form class="text-left" method="post" action="{{ url_for('register') }}">
+            <div class="form-row">
+              <div class="form-group col-md-6"> <label for="form19">Nume</label> <input type="text" class="form-control" id="form19" placeholder="Parvana" required="required" name="nume"> </div>
+              <div class="form-group col-md-6"> <label for="form20">Prenume</label> <input type="text" class="form-control" id="form20" placeholder="Vlad-Stefan" required="required" name="prenume"> </div>
+            </div>
+            <div class="form-group" style=""> <label for="form16">Data de nastere</label> <input type="date" class="form-control" id="form16" placeholder="Johann W. Goethe" required="required" name="dataNastere"> </div>
+            <div class="form-group"> <label for="form18">Email</label> <input type="email" class="form-control" id="form18" placeholder="vlad-stefan.parvana@student.tuiasi.ro" required="required" name="email"> </div>
+            <div class="form-row">
+              <div class="form-group col-md-12"> <label for="form19">Parola</label> <input type="password" class="form-control" id="form19" placeholder="••••" required="required" name="parola"> </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on" required="required"> <label class="form-check-label" for="form21">Sunt de acord cu&nbsp;<a href="#">Termenii si conditiile</a>&nbsp;firmei Tarom.&nbsp;</label> </div>
+            </div> <button type="submit" class="btn btn-primary">Trimite</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 bg-primary h-25 text-light" style="">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0">© Parvana Vlad-Stefan &amp; Vartolomei Mihai-Sebastian<br></p>
+          <p class="mb-0">Proiect BD 2023-2034<br></p>
+          <p class="mb-0"><br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous" style=""></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous" style=""></script>
+</body>
+
+</html>

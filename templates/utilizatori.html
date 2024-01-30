@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://static.pingendo.com/bootstrap/bootstrap-4.3.1.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container justify-content-center"> <button class="navbar-toggler navbar-toggler-right border-0" type="button" data-toggle="collapse" data-target="#navbar15">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-center" id="navbar15">
+        <ul class="navbar-nav" style="">
+          <li class="nav-item mx-2"> <a class="nav-link" href="{{ url_for('zboruri_admin') }}">Zboruri</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="{{ url_for('rute') }}">Rute</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link navbar-brand mr-0 text-white" href="#"><i class="fa d-inline fa-lg fa-plane"></i>
+              <b> Tarom</b></a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="{{ url_for('utilizatori') }}">Utilizatori</a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="{{ url_for('statistici') }}">Statistici </a> </li>
+          <li class="nav-item mx-2"> <a class="nav-link" href="{{ url_for('logout') }}">Iesire </a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="py-1 pb-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12" style="">
+          <div class="table-responsive" style="">  <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nume</th>
+                  <th>Prenume</th>
+                  <th>Adresa email</th>
+                  <th>Data nastere</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr></tr>
+                {% for user in users_data %}
+                <tr>
+                  <td><a href="{{ url_for('display_user',user_id=user[0])}}">{{ user[0] }} </a></td>
+                  <td>{{ user[1] }}</td>
+                  <td>{{ user[2] }}</td>
+                  <td>{{ user[3] }}</td>
+                  <td>{{ user[4] }}</td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 bg-primary h-25 text-light" style="">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0">© Parvana Vlad-Stefan &amp; Vartolomei Mihai-Sebastian<br></p>
+          <p class="mb-0">Proiect BD 2023-2034<br></p>
+          <p class="mb-0"><br></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
